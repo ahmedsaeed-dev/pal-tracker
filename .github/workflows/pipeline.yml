@@ -43,13 +43,6 @@ jobs:
         cf target -o "$CF_ORG" -s "$CF_SPACE"
         cf push -p ./pal-tracker/pal-tracker.jar
       env:
-<<<<<<< HEAD
-        CF_API_URL: https://api.sys.evans.pal.pivotal.io/
-        CF_ORG: ahmed-org
-        CF_SPACE: development
-        CF_USERNAME: ahmed
-        CF_PASSWORD: keepitsimple
-=======
         CF_API_URL: ${{ secrets.CF_API_URL }}
         CF_ORG: ${{ secrets.CF_ORG }}
         CF_SPACE: ${{ secrets.CF_SPACE }}
@@ -77,9 +70,4 @@ jobs:
         CF_ORG: ${{ secrets.CF_ORG }}
         CF_SPACE: ${{ secrets.CF_SPACE }}
         CF_USERNAME: ${{ secrets.CF_USERNAME }}
-<<<<<<< HEAD
         CF_PASSWORD: ${{ secrets.CF_PASSWORD }}
->>>>>>> c5a3bdf... Add task for migrating databases
-=======
-        CF_PASSWORD: ${{ secrets.CF_PASSWORD }}
->>>>>>> c5a3bdf... Add task for migrating databases
